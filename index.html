@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayushverse – Digital Identity v2.0</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.ibb.co/N6zGR334/IMG-20250424-180504.jpg" />
+
+</head>
+<body>
+
+  <!-- 🔄 Preloader -->
+  <div id="preloader">
+    <div class="loader-cube"></div>
+    <p class="loading-text">Initializing Ayushverse...</p>
+  </div>
+
+  <!-- 🧠 Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-trail"></div>
+
+  <!-- 🔗 Header Navigation -->
+  <header>
+    <div class="logo">AYUSHVERSE</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#traits">Traits</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🌌 Hero Section -->
+  <section class="hero-section" id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <h1 class="hero-title">AYUSH KUMAR</h1>
+      <p class="type-line line1"></p>
+      <p class="type-line line2"></p>
+      <div class="hero-buttons">
+        <button class="btn neon-glow">Access Portfolio</button>
+        <button class="btn neon-glow">Download Identity</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 👨‍💻 About Section -->
+  <section class="about-section" id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="identity-container">
+      <div class="identity-card" id="aboutCard">
+        <div class="identity-img">
+          <img src="https://i.ibb.co/N6zGR334/IMG-20250424-180504.jpg" alt="Ayush" />
+        </div>
+        <div class="identity-info">
+          <h3>Ayush Kumar</h3>
+          <p>2nd Year – B.Tech CSE @ JBIT</p>
+          <p class="badge">Fast Learner</p>
+          <p class="about-para">
+            Exploring frontend beyond limits — combining HTML, CSS, JS, animations & futuristic UX.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧠 Skills Section -->
+  <section class="skills-section" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-sphere">
+      <div class="skill-logo">HTML</div>
+      <div class="skill-logo">CSS</div>
+      <div class="skill-logo">JavaScript</div>
+      <div class="skill-logo">Python</div>
+    </div>
+  </section>
+
+  <!-- 📂 Projects Section -->
+  <section class="projects-section" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+
+      <!-- Snake Game -->
+      <a href="https://ayushkumar345.github.io/snakes/" target="_blank" class="project-card">
+        <img src="https://i.ibb.co/CspWKM8C/snake-game.webp" alt="Snake Game" />
+        <div class="project-title">Ultimate Snake Game</div>
+      </a>
+
+      <!-- Tic Tac Toe -->
+      <a href="https://ayushkumar345.github.io/tic-tac-toe/" target="_blank" class="project-card">
+        <img src="https://i.ibb.co/bM6SxX22/OIP.webp" alt="Tic Tac Toe" />
+      </a>
+
+      <!-- Rock Paper Scissors -->
+      <a href="https://ayushkumar345.github.io/rock-paper-scissorss/" target="_blank" class="project-card">
+        <img src="https://i.ibb.co/WW9CmNnC/5777368.webp" alt="Rock Paper Scissors" />
+      </a>
+
+    </div>
+  </section>
+  
+  <!-- ========== PART 5: DNA / Traits SECTION ========== -->
+<section class="traits-section" id="traits">
+  <h2 class="section-title">DNA / Traits</h2>
+
+  <div class="traits-container">
+    
+    <!-- Creativity -->
+    <div class="trait-ring progress-circle" data-percent="85">
+      <div class="percent-text">0%</div>
+      <div class="trait-label">Creativity</div>
+    </div>
+
+    <!-- Speed -->
+    <div class="trait-ring progress-circle" data-percent="90">
+      <div class="percent-text">0%</div>
+      <div class="trait-label">Speed</div>
+    </div>
+
+    <!-- Focus -->
+    <div class="trait-ring progress-circle" data-percent="70">
+      <div class="percent-text">0%</div>
+      <div class="trait-label">Focus</div>
+    </div>
+
+    <!-- Precision -->
+    <div class="trait-ring progress-circle" data-percent="75">
+      <div class="percent-text">0%</div>
+      <div class="trait-label">Precision</div>
+    </div>
+
+    <!-- Consistency -->
+    <div class="trait-ring progress-circle" data-percent="95">
+      <div class="percent-text">0%</div>
+      <div class="trait-label">Consistency</div>
+    </div>
+
+  </div>
+</section>
+
+
+  
+    
+      <!-- Glowing neon rings will go here in part 4 -->
+    </div>
+  </section>
+
+  <!-- 📞 Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2 class="section-title">Connect With Me</h2>
+    <div class="terminal-contact">
+      <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name" />
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" />
+        <label>Message:</label>
+        <textarea rows="5" placeholder="Say something..."></textarea>
+        <button type="submit" class="btn neon-glow">TRANSMIT</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ⚙️ Footer -->
+  <footer class="footer">
+    <div class="system-console">
+      <p><span class="status">SYSTEM STATUS:</span> ACTIVE</p>
+      <p><span class="status">OPERATOR:</span> AYUSH KUMAR</p>
+      <p><span class="status">LOCATION:</span> JBIT DEHRADUN | CSE</p>
+      <p><span class="status">VERSION:</span> PORTFOLIO v2.0</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

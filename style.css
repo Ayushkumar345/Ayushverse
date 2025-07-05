@@ -1,0 +1,417 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  scroll-behavior: smooth;
+  background: #0B0B0B;
+  font-family: 'Orbitron', 'Rajdhani', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ========== PRELOADER ========== */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.loader-cube {
+  width: 40px;
+  height: 40px;
+  background: #00f0ff;
+  animation: rotateCube 1.2s infinite linear;
+}
+.loading-text {
+  color: #0ff;
+  margin-top: 15px;
+  font-size: 18px;
+  text-shadow: 0 0 10px #00f0ff;
+}
+@keyframes rotateCube {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ========== CUSTOM CURSOR ========== */
+.cursor, .cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.cursor {
+  width: 12px;
+  height: 12px;
+  background: #00f0ff;
+  box-shadow: 0 0 15px #00f0ff;
+}
+.cursor-trail {
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 240, 255, 0.2);
+  box-shadow: 0 0 20px #00f0ff;
+  transition: all 0.1s ease-out;
+}
+
+/* ========== HEADER ========== */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 10;
+}
+.logo {
+  color: #00f0ff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px #00f0ff;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00f0ff;
+  bottom: -2px;
+  left: 0;
+  transition: 0.3s;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ========== HERO SECTION ========== */
+.hero-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#hero-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#000, #0B0B0B);
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.hero-title {
+  font-size: 4rem;
+  color: #00f0ff;
+  text-shadow: 0 0 15px #00f0ff;
+}
+.type-line {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ccc;
+}
+.btn {
+  margin: 15px 10px;
+  padding: 10px 22px;
+  border: none;
+  background: #00f0ff;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.neon-glow {
+  background: transparent;
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+  box-shadow: 0 0 10px #00f0ff, inset 0 0 5px #00f0ff;
+  transition: all 0.3s ease;
+}
+.neon-glow:hover {
+  background: #00f0ff;
+  color: #000;
+}
+
+/* ========== SECTION TITLE ========== */
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 60px auto 30px;
+  text-shadow: 0 0 8px #00f0ff;
+}
+
+/* ========== ABOUT SECTION ========== */
+.identity-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.identity-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00f0ff55;
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px 30px;
+  max-width: 600px;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+.identity-img img {
+  width: 120px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00f0ff;
+}
+.identity-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.identity-info .badge {
+  background: #00f0ff33;
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: #00f0ff;
+  margin: 5px 0;
+  display: inline-block;
+}
+.about-para {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ========== SKILLS SECTION ========== */
+.skills-sphere {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.skill-logo {
+  background: #111;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 2px solid #00f0ff55;
+  box-shadow: 0 0 10px #00f0ff55;
+  color: #00f0ff;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+.skill-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00f0ff;
+}
+
+/* ========== PROJECTS SECTION ========== */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+}
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  max-width: 300px;
+  border: 2px solid #00f0ff55;
+  box-shadow: 0 0 20px #00f0ff22;
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00f0ff99;
+}
+.project-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.project-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 240, 255, 0.1);
+  color: #00f0ff;
+  font-weight: bold;
+  padding: 8px 0;
+  text-shadow: 0 0 8px #00f0ff;
+}
+
+/* ========== TRAITS SECTION ========== */
+#traits {
+  padding: 80px 20px;
+  background: #000;
+  text-align: center;
+}
+
+.traits-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.trait-ring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.progress-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: conic-gradient(#00f0ff 0%, #222 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px #00f0ff80;
+  transition: all 0.5s ease-in-out;
+}
+
+.percent-text {
+  font-size: 28px;
+  color: #fff;
+  font-weight: bold;
+  font-family: Orbitron, sans-serif;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+.trait-label {
+  margin-top: 20px;
+  color: #00f0ff;
+  font-size: 18px;
+  font-family: 'Rajdhani', sans-serif;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+/* ========== CONTACT SECTION ========== */
+.terminal-contact form {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 25px #00f0ff11;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.terminal-contact label {
+  color: #00f0ff;
+}
+.terminal-contact input,
+.terminal-contact textarea {
+  background: #111;
+  border: 1px solid #00f0ff44;
+  padding: 10px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  padding: 20px;
+  background: #000;
+  text-align: center;
+  color: #ccc;
+}
+.system-console p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+.status {
+  color: #00f0ff;
+}
+
+/* ========== TRAITS SECTION ========== */
+.traits-section {
+  padding: 60px 20px;
+  background: #0B0B0B;
+  text-align: center;
+}
+
+.traits-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding-top: 40px;
+}
+
+.trait-ring {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,240,255,0.2) 40%, transparent 70%);
+  box-shadow: 0 0 30px #00f0ff, inset 0 0 20px #00f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: pulseRing 4s infinite ease-in-out;
+}
+
+.trait-ring:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px #00f0ff, inset 0 0 25px #00f0ff;
+}
+
+.trait-label {
+  font-family: 'Orbitron', sans-serif;
+  color: #00f0ff;
+  font-size: 1rem;
+  text-shadow: 0 0 10px #00f0ff;
+  position: absolute;
+  bottom: -35px;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+@keyframes pulseRing {
+  0%, 100% {
+    box-shadow: 0 0 30px #00f0ff, inset 0 0 20px #00f0ff;
+  }
+  50% {
+    box-shadow: 0 0 50px #00f0ff, inset 0 0 30px #00f0ff;
+  }
+}
+
